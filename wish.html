@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wush For My GF on GF Day</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('C:\Users\admin\OneDrive\Desktop\us.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #f8f8f8;
+        }
+    
+        h2 {
+            text-align: center;
+            color: #ff99cc;
+        }
+    
+        .message-box {
+            max-width: 700px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+            margin-top: 30px;
+            color: #f0e6f6;
+        }
+    
+        .signature {
+            text-align: right;
+            font-style: italic;
+            margin-top: 20px;
+            color: #ffb3d9;
+        }
+    
+        .heart-btn-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+    
+        .heart-btn {
+            background: #ff4da6;
+            border: none;
+            padding: 15px 25px;
+            color: white;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+    
+        .heart-btn:hover {
+            background: #cc0066;
+        }
+    
+        .countdown-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+    
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+    
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(255,255,255,0.2);
+        }
+    
+        .countdown-number {
+            font-size: 36px;
+            color: #ff66b2;
+        }
+    
+        .countdown-label {
+            color: #f8f8f8;
+        }
+    
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 40px;
+            color: #ccc;
+        }
+    </style>
+    
+</head>
+<body>
+  <section class="message-box">
+            <h2>My Special Message For You</h2>
+            <p>On this GF Day, I want you to know how incredibly special you are to me. Every moment with you feels like a beautiful dream I never want to wake up from.</p>
+            <p>Your smile brightens my darkest days, your laugh is the melody that plays in my heart, and your love is the greatest gift I've ever received.</p>
+            <p>I cherish all our memories together - from the adventurous trips to the quiet moments at home. Each day with you is a precious page in our love story.</p>
+            <p>Thank you for being my partner, my best friend, and the love of my life. I look forward to creating countless more memories with you.</p>
+            <div class="signature">Forever Yours</div>
+        </section>
+
+        <div class="heart-btn-container">
+            <button class="heart-btn" id="heart-button">
+                <i class="fas fa-heart"></i> Click for a Surprise!
+            </button>
+        </div>
+        <section class="memory-section">
+            <h2>Moment I imagined with you</h2>
+            <div class="gallery">
+              <div class="gallery-item">
+                <img src="C:\Users\admin\OneDrive\Desktop\us.png" alt="Couple smiling at sunset">
+                <div class="gallery-caption">
+
+        <div class="countdown-container">
+            <h2>Counting Our Love</h2>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="footer">
+        <p>Created with Love for GF Day</p>
+    </div>
+
+    <script>
+        const button = document.getElementById('heart-button');
+        button.addEventListener('click', () => {
+            alert('I LOVE YOU! ❤️');
+            window.open('https://youtu.be/kJTgA-aBwZA?si=PWLLETDCmY_HPHlC', '_blank');
+        });
+
+        const targetDate = new Date("2025-08-01T07:48:00").getTime();
+
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerHTML = "We made it, love! 💖";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

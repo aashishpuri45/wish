@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wush For My GF on GF Day</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="header">
+    <div class="hearts" id="hearts-container"></div>
+    <h1>Happy GF Day, My Love! 💖</h1>
+    <p>A special celebration of you and our beautiful journey together</p>
+  </div>
+
+  <div class="container">
+    <!-- Countdown Timer -->
+    <div class="countdown-box">
+      <h2>Countdown to Our Next Date 💞</h2>
+      <div class="countdown">
+        <span id="days">00</span> days 
+        <span id="hours">00</span> hrs 
+        <span id="minutes">00</span> min 
+        <span id="seconds">00</span> sec
+      </div>
+    </div>
+
+    <!-- Quiz Form -->
+    <div id="quiz-container" class="message-box">
+      <h2>Guess Our First Moment Together 💑</h2>
+      <form id="quiz-form">
+        <label for="first-date">What was the date we met? (BS)</label><br/>
+        <input type="date" id="first-date" required><br/><br/>
+
+        <label for="hour">What was the time we first talked? (Enter hour and minute)</label><br/>
+        <input type="number" id="hour" min="0" max="23" placeholder="HH" required>
+        <input type="number" id="minute" min="0" max="59" placeholder="MM" required><br/><br/>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Surprise Button -->
+    <div class="surprise">
+      <button id="heart-button"><i class="fas fa-heart"></i> Click for a Surprise!</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
